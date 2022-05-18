@@ -1,0 +1,61 @@
+{
+  "entryFile": "src/application.ts",
+  "noImplicitAdditionalProperties": "throw-on-extras",
+  "spec": {
+    "version": "1.0.1",
+    "outputDirectory": ".",
+    "specVersion": 3,
+    "tags": [
+      {
+        "name": "Event",
+        "description": "Event operations"
+      }
+    ],
+    "schemes": [
+      "http",
+      "https"
+    ],
+    "spec": {
+      "info": {
+        "title": "Birdie Test",
+        "description": "Birdie Test Api documentation",
+        "termsOfService": "https://github.com/birdiecare/birdie-test",
+        "contact": {
+          "name": "Sofwan Lawal",
+          "url": "https://sofwancoder.com",
+          "email": "hi@sofwancoder.com"
+        }
+      },
+      "servers": [
+        {
+          "url": "{protocol}://{host}:{port}{basePath}",
+          "variables": {
+            "port": {
+              "default": "8003"
+            },
+            "host": {
+              "default": "localhost",
+              "enum": [
+                "localhost"
+              ]
+            },
+            "protocol": {
+              "default": "http",
+              "enum": [
+                "http",
+                "https"
+              ]
+            },
+            "basePath": {
+              "default": "/",
+              "enum": [
+                "/"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "specMerging": "recursive"
+  }
+}
